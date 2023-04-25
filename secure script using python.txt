@@ -1,0 +1,34 @@
+Supported ongoing projects creating a secure script using python to execute assigned features.
+Developed and setup secure network that employees accessed from headquarters and branch offices
+to the data center, securing wireless AP (server, workstations, and VPN server).
+I have an assignment where I have to ask the user for a 4 digit pin. 
+The correct pin is combination of letters, number and characters. I have to give the user 3 times before they're locked out. 
+I also have to add a break statement. This is the example of the outpu
+
+
+desired_pin = '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y z, !, @, #, $, %, &'
+max_tries = 3
+
+
+def verify_pin(the_pin):
+    return the_pin == desired_pin
+
+
+def main():
+    tries = 0
+
+    while tries < max_tries:
+        pin = input('please enter your pin code: ')
+        if verify_pin(pin):
+            print('Correct')
+            break
+        else:
+            print('Incorrect. Please enter again: ')
+        tries += 1
+
+    else:   # Else will run when no `break` statement is run in while loop.
+        print("I am LOCKIN' you out now!")
+
+
+if __name__ == '__main__':
+    main()
